@@ -13,7 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* small helper for glass navbar */
 .glass {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(6px);
