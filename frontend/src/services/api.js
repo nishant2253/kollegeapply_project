@@ -1,4 +1,4 @@
-export const API_BASE = "http://localhost:5000/api";
+export const API_BASE = "https://landing-pages-backend-rqqo.onrender.com/api";
 
 export const getFees = async () => {
   const res = await fetch(`${API_BASE}/fees`);
