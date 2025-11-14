@@ -20,18 +20,23 @@ This project showcases two fully-featured Single Page Applications (SPAs) with:
 1. **Maharaja Agrasen Institute of Technology (MAIT)** - Delhi
 2. **Veermata Jijabai Technological Institute (VJTI)** - Mumbai
 
-## Live Demo
+## Live Deployment
 
-- **Frontend**: [https://your-frontend.netlify.app](https://your-frontend.netlify.app)
-- **Backend API**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
+### Frontend (Vercel)
+
+**[https://kollegeapply-landingpage-frontend.vercel.app/](https://kollegeapply-landingpage-frontend.vercel.app/)**
+
+### Backend API (Render)
+
+**[https://landing-pages-backend-rqqo.onrender.com/](https://landing-pages-backend-rqqo.onrender.com/)**
 
 ### Routes
 
-| Route   | Description                |
-| ------- | -------------------------- |
-| `/`     | Home - University Selector |
-| `/mait` | MAIT Delhi Landing Page    |
-| `/vjti` | VJTI Mumbai Landing Page   |
+| Route   | Description                    |
+| ------- | ------------------------------ |
+| `/`     | Home selector for universities |
+| `/mait` | MAIT Delhi Landing Page        |
+| `/vjti` | VJTI Mumbai Landing Page       |
 
 ## Key Features
 
@@ -44,7 +49,7 @@ This project showcases two fully-featured Single Page Applications (SPAs) with:
 - **Smooth Animations** - Engaging transitions and interactions
 - **SPA Architecture** - Fast navigation with React Router
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -118,50 +123,34 @@ landing-pages-project/
 └── README.md
 ```
 
-## 🔧 Installation & Setup
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-- Git
+## Installation & Local Setup
 
 ### Backend Setup
 
 ```bash
-# Navigate to backend directory
 cd backend
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-The backend API will be available at `http://localhost:5000`
+Backend runs at: `http://localhost:5000`
 
 ### Frontend Setup
 
 ```bash
-# Navigate to frontend directory
 cd frontend
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-The frontend app will be available at `http://localhost:5173`
+Frontend runs at: `http://localhost:5173`
 
-## 📡 API Documentation
+## API Documentation
 
 ### Base URL
 
 ```
-http://localhost:5000/api
+https://landing-pages-backend-rqqo.onrender.com/api
 ```
 
 ### Endpoints
@@ -206,20 +195,13 @@ GET /api/fees
         "min": 145000,
         "max": 165000,
         "currency": "INR"
-      },
-      {
-        "course": "Electronics & Communication",
-        "duration": "4 years",
-        "min": 140000,
-        "max": 160000,
-        "currency": "INR"
       }
     ]
   }
 }
 ```
 
-## Lead Form Integration
+## Lead Form Integration (Pipedream)
 
 ### Pipedream Webhook Setup
 
@@ -229,7 +211,7 @@ GET /api/fees
 4. Update in `frontend/src/components/LeadForm.jsx`:
 
 ```javascript
-const PIPEDREAM_URL = "https://eo12345.m.pipedream.net";
+const PIPEDREAM_URL = "https://YOUR-WEBHOOK.m.pipedream.net";
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -247,13 +229,6 @@ const handleSubmit = async (e) => {
   });
 };
 ```
-
-### Benefits
-
-- No page refresh required
-- Real-time lead capture
-- Automatic logging in Pipedream dashboard
-- Easy integration with CRM systems
 
 ## Code Highlights
 
@@ -337,42 +312,46 @@ The application is fully responsive with:
 - **Touch-Friendly** - Large tap targets for mobile
 - **Accessible** - WCAG 2.1 compliant
 
-## 🚀 Deployment Guide
+## Deployment Guide (Final Configuration)
 
 ### Backend Deployment (Render)
 
-1. Push your code to GitHub
-2. Go to [Render Dashboard](https://render.com)
-3. Click **New** → **Web Service**
-4. Connect your repository
-5. Configure:
-   - **Build Command**: `npm install`
-   - **Start Command**: `node src/server.js`
-6. Deploy and copy the URL
+1. Push backend folder to GitHub
+2. Open [Render](https://render.com) → **New** → **Web Service**
+3. Configure:
 
-### Frontend Deployment (Netlify)
+| Field          | Value                |
+| -------------- | -------------------- |
+| Root Directory | `backend`            |
+| Build Command  | `npm install`        |
+| Start Command  | `node src/server.js` |
+| Environment    | Node 18+             |
 
-```bash
-# Build the project
-npm run build
-
-# Deploy to Netlify
-netlify deploy --prod --dir=dist
-```
+4. Deploy
+5. Copy URL: `https://landing-pages-backend-rqqo.onrender.com/`
 
 ### Frontend Deployment (Vercel)
 
-```bash
-# Deploy with Vercel CLI
-vercel --prod
-```
+1. Open [Vercel](https://vercel.com) → **Add New** → **Project**
+2. Select your GitHub repo
+3. Set:
+
+| Field            | Value           |
+| ---------------- | --------------- |
+| Root Directory   | `frontend`      |
+| Build Command    | `npm run build` |
+| Install Command  | `npm install`   |
+| Output Directory | `dist`          |
+
+4. Deploy
+5. Live URL: `https://kollegeapply-landingpage-frontend.vercel.app/`
 
 ### Update API Base URL
 
 After backend deployment, update `frontend/src/services/api.js`:
 
 ```javascript
-const API_BASE = "https://your-backend.onrender.com/api";
+const API_BASE = "https://landing-pages-backend-rqqo.onrender.com/api";
 ```
 
 ## Application Flow
@@ -417,11 +396,11 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Nishant Gupta**
 
