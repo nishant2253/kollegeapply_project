@@ -1,0 +1,11 @@
+{
+  "university": "ABC University",
+  "location": "Mumbai, Maharashtra",
+  "established": 2005,
+  "ranking": 42,
+  "facilities": ["Hostel", "Sports Complex", "Library", "Modern Labs"],
+  "placements": {
+    "average_package": "7 LPA",
+    "highest_package": "22 LPA"
+  }
+}

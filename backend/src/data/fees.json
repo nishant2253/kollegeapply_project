@@ -1,0 +1,13 @@
+{
+  "university": "ABC University",
+  "courses": [
+    {
+      "name": "B.Tech",
+      "fees": { "min": 80000, "max": 180000 }
+    },
+    {
+      "name": "MBA",
+      "fees": { "min": 120000, "max": 250000 }
+    }
+  ]
+}

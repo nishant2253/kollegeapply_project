@@ -1,0 +1,64 @@
+# ============================
+# Node / Backend ignores
+# ============================
+backend/node_modules/
+backend/.env
+backend/.cache
+backend/dist/
+backend/.DS_Store
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/.vscode/
+
+# ============================
+# Frontend (React + Vite)
+# ============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.vscode/
+
+# ============================
+# Global system ignores
+# ============================
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE directories
+.vscode/
+.idea/
+
+# OS junk files
+*.swp
+*.swm
+*.swo
+*~
+.cache/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+dist/
+build/
+out/
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+
+# NPM Lock
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
